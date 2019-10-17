@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>users-app</groupId>
 	<artifactId>users-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>users-app</name>
 	<description>Demo project for java in docker presentation</description>
 
@@ -58,6 +58,14 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>1.6.1</version>
+				<configuration>
+					<to>docker.io/krzpob/users-app:${env.DOCKERFILE_VERSION}</to>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
