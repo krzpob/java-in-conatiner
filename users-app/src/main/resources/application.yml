@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: users-app
+  datasource:
+    url: jdbc:mysql://mysql:3306/users?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: zero
+    password: password
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+info:
+  app:
+    name: Users Service
+    description: Serwis do zapisu użytkownikow
+    version: v1
