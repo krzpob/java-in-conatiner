@@ -63,7 +63,8 @@
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>1.6.1</version>
 				<configuration>
-					<to>docker.io/krzpob/users-app:${env.DOCKERFILE_VERSION}</to>
+					<to>docker.io/krzpob/users-app:${project.version}</to>
+					<to>docker.io/krzpob/users-app:latest</to>
 				</configuration>
 			</plugin>
 			<plugin>
